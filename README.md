@@ -12,6 +12,11 @@ See
 - [https://github.com/johnfig/teachers_pet/blob/master/db%2Fseeds.rb](https://github.com/johnfig/teachers_pet/blob/master/db%2Fseeds.rb)  
 > This is an exercise to teach me about many-to-many relationships
 
+次のコマンドでいろいろな query の方法とその結果を見ることができる。
+
+    $ rails runner sample.rb
+
+
 1. Getting started
 ------------------
 

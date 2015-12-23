@@ -5,5 +5,6 @@ class CreateRoles < ActiveRecord::Migration
       t.string :name
       t.timestamps null: false
     end
+    add_index :roles, [:name]
   end
 end
