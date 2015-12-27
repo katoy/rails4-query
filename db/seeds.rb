@@ -19,16 +19,16 @@ begin
     now = Time.now
     cl = Client.all[0]
     cl.orders.build([
-      { price: 100, ordered_at: 1.days.ago(now) },
-      { price: 200, ordered_at: 5.hours.ago(now) },
-      { price: 400, ordered_at: 1.days.ago(now) }
+      { price: 100, ordered_at: 1.days.ago(now), status: 'received' },
+      { price: 200, ordered_at: 5.hours.ago(now), status: 'active' },
+      { price: 400, ordered_at: 1.days.ago(now), status: 'payed' }
     ])
     cl.save!
     cl = Client.all[1]
     cl.orders.build([
-      { price: 110, ordered_at: 1.days.ago(now) },
-      { price: 210, ordered_at: 5.hours.ago(now) },
-      { price: 410, ordered_at: 2.days.ago(now) }
+      { price: 110, ordered_at: 1.days.ago(now), status: 'payed' },
+      { price: 210, ordered_at: 5.hours.ago(now), status: 'payed' },
+      { price: 410, ordered_at: 2.days.ago(now), status: 'payed' }
     ])
     cl.save!
   end
