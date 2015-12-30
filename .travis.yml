@@ -1,0 +1,18 @@
+language: ruby
+sudo: false
+cache:
+  apt: true
+  bundler: true
+  directories:
+  - vendor/something
+  - .autoconf
+rvm:
+  - 2.2.3
+env:
+  - DB=sqlite
+bundler_args: --without production
+
+addons:
+  apt:
+    packages:
+    - silversearcher-ag
